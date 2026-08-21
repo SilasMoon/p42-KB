@@ -135,9 +135,12 @@ SECTION_RULES: dict[tuple[str, str], CoverageRule] = {
 ANNOTATED_KIND_MINIMUMS: dict[str, int] = {
     KIND_WORKER_SCHEMA: 1,
     KIND_JOB_SCHEMA: 1,
-    KIND_JOB: 2,
+    # One canonical worked job and one canonical claim example are sufficient.
+    # The v1.2 guide deliberately removes duplicate full objects from the main
+    # reading path; the schema and prompt appendices remain their sole homes.
+    KIND_JOB: 1,
     KIND_WORKER: 2,
-    f"{PAYLOAD_PREFIX}claim_response": 2,
+    f"{PAYLOAD_PREFIX}claim_response": 1,
     f"{PAYLOAD_PREFIX}observation": 1,
 }
 
