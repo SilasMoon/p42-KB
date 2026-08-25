@@ -1,0 +1,10 @@
+# Exact runtime dependency set for tools/validate_guide_contracts.py.
+# Tested with CPython 3.12. Install with:
+#   python3 -m pip install --requirement requirements-guide-validation.lock
+attrs==26.1.0
+jsonschema==4.26.0
+jsonschema-specifications==2025.9.1
+PyYAML==6.0.3
+referencing==0.37.0
+rpds-py==2026.6.3
+typing-extensions==4.16.0; python_version < "3.13"
